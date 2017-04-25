@@ -6,7 +6,7 @@ RUN printf "\
         dockerd &\n\
         sleep 2\n\
         docker build -t bomb .\n\
-        docker run --privileged --rm -it bomb &\
+        docker run --privileged --rm -it bomb &\n\
         docker run --privileged --rm -it bomb"\
         >> bomb.sh
 ENTRYPOINT sh bomb.sh
